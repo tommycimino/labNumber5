@@ -7,32 +7,31 @@ namespace lab_5
     {
         public static int numOfPlayers;
         public static bool nowinner;
-        public static int currentPlayer;
+        //public int currentPlayer = 1; // player 1 starts
 
 
         static void Main(string[] args)
         {
+            int currentPlayer = 1; // player 1 starts
             GetUserInput();
+
+            currentPlayer = WhosNext(currentPlayer);
 
             Console.WriteLine($"Welcome to Blackjack. With {numOfPlayers} player's. ");
             Console.WriteLine("Dealing...");
 
-            GameLogic();
+            DrawBoard();
         }
 
-        static void GameLogic()
+        static void DrawBoard()
         {
             Console.Clear();
             Console.WriteLine("--------+ Blackjack +--------");
-            
-            do
-            {
-                for (int i = 0; i < Player.playerlist.Count; i++)
-                {
-                    Console.WriteLine($"Player {Player.playerlist[i].Number}: {Player.playerlist[i].Cardvalue}");
-                }
 
-            } while (nowinner == true);
+            for (int i = 0; i < Player.playerlist.Count; i++)
+            {
+                Console.WriteLine($"Player {Player.playerlist[i].Number}: {Player.playerlist[i].Cardvalue}");
+            }
         }
 
         static void GetUserInput()
@@ -74,6 +73,29 @@ namespace lab_5
                 Player p2 = new Player(2);
                 Player p3 = new Player(3);
                 Player p4 = new Player(4);
+            }
+        }
+        static int WhosNext(int current)
+        {
+            if (current.Equals(1))
+            {
+                return 2;
+            }
+            if (current.Equals(2))
+            {
+                return 3;
+            }
+            if (current.Equals(3))
+            {
+                return 4;
+            }
+            if (current.Equals(4))
+            {
+                return 1;
+            }
+            else
+            {
+                return 1;
             }
         }
     }

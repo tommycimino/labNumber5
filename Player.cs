@@ -12,7 +12,7 @@ public class Player
     public Player(int number)
     {
         Number = number;
-        Cardvalue = random.Next(1, 11);
+        Cardvalue = random.Next(1, 21);
 
         playerlist.Add(this);
     }

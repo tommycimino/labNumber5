@@ -9,10 +9,10 @@ public class Player
     Random random = new Random();
     public static List<Player> playerlist = new List<Player>();    
 
-    public Player(int number)
+    public Player(int number, int value)
     {
         Number = number;
-        Cardvalue = random.Next(1, 21);
+        Cardvalue = value;
 
         playerlist.Add(this);
     }

@@ -66,28 +66,28 @@ namespace lab_5
             if (numOfPlayers.Equals(1))
             {
                 Console.WriteLine("You will be playing by yourself.");
-                Player p1 = new Player(1, 9);
+                Player p1 = new Player(1, r.Next(1, 21));
             }
 
             if (numOfPlayers.Equals(2))
             {
-                Player p1 = new Player(1, r.Next(1, 11));
-                Player p2 = new Player(2, r.Next(1, 11));
+                Player p1 = new Player(1, r.Next(1, 21));
+                Player p2 = new Player(2, r.Next(1, 21));
             }
 
             if (numOfPlayers.Equals(3))
             {
-                Player p1 = new Player(1, r.Next(1, 11));
-                Player p2 = new Player(2, r.Next(1, 11));
-                Player p3 = new Player(3, r.Next(1, 11));
+                Player p1 = new Player(1, r.Next(1, 21));
+                Player p2 = new Player(2, r.Next(1, 21));
+                Player p3 = new Player(3, r.Next(1, 21));
             }
 
             if (numOfPlayers.Equals(4))
             {
-                Player p1 = new Player(1, r.Next(1, 11));
-                Player p2 = new Player(2, r.Next(1, 11));
-                Player p3 = new Player(3, r.Next(1, 11));
-                Player p4 = new Player(4, r.Next(1, 11));
+                Player p1 = new Player(1, r.Next(1, 21));
+                Player p2 = new Player(2, r.Next(1, 21));
+                Player p3 = new Player(3, r.Next(1, 21));
+                Player p4 = new Player(4, r.Next(1, 21));
             }
         }
         static int WhosNext(int current)

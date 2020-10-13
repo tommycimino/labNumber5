@@ -7,10 +7,6 @@ namespace lab_5
     {
         public static int numOfPlayers;
         public static int status; // game status; 0 = live game | 1 = someone won
-        public static int PlayerMove;
-        public static int winningPlayer;
-        //public int currentPlayer = 1; // player 1 starts
-
 
         static void Main(string[] args)
         {
